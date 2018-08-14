@@ -1,0 +1,30 @@
+{
+  "name": "KPSOM_patternlab_test",
+  "version": "1.0.0",
+  "description": "Install pattern lab npm init -y && npx @pattern-lab/cli -c patternlab init",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "patternlab": "patternlab"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sheetstone/KPSOM_patternlab_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sheetstone/KPSOM_patternlab_test/issues"
+  },
+  "homepage": "https://github.com/sheetstone/KPSOM_patternlab_test#readme",
+  "dependencies": {
+    "@pattern-lab/cli": "^0.0.1-alpha.23",
+    "@pattern-lab/core": "^3.0.0-alpha.16",
+    "@pattern-lab/engine-mustache": "^2.0.0-alpha.8",
+    "@pattern-lab/uikit-workshop": "^1.0.0-alpha.7",
+    "gulp": "3.9.1",
+    "minimist": "1.2.0",
+    "starterkit-mustache-bootstrap": "github:pattern-lab/starterkit-mustache-bootstrap"
+  }
+}
