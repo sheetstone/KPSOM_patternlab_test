@@ -1,5 +1,5 @@
 {
-  "name": "KPSOM_patternlab_test",
+  "name": "KPSOM_Patternlab_Test",
   "version": "1.0.0",
   "description": "Install pattern lab npm init -y && npx @pattern-lab/cli -c patternlab init",
   "main": "index.js",
