@@ -115,25 +115,24 @@ $color-text-link-light-visited: $color-white;
 $color-border: $color-gray-50;
 
 
-
-
-
 /*------------------------------------*\
     #TYPOGRAPHY
 \*------------------------------------*/
 
-$font : "HelveticaNeue", "Helvetica", "Arial", sans-serif;
-$font-secondary : Georgia, Times, "Times New Roman", serif;
+$Avenir-Next_Pro: "Avenir Next Pro";
+$Arial: "Arial";
+$Adobe-Caslon-Pro: "Adobe Caslon Pro";
+$Gotham: "Gotham";
+
+$font : $Avenir-Next_Pro, $Arial;
+$font-secondary : $Adobe-Caslon-Pro, "Times New Roman", serif;
+$font-digital: $Gotham;
 
 $font-size-small : 0.75rem;
 $font-size-small-2 : 0.875rem;
 $font-size-med : 1rem;
 $font-size-med-2: 1.0625rem;
 $font-size-large : 1.4375rem;
-
-
-
-
 
 
 /*------------------------------------*\
