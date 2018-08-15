@@ -18,15 +18,34 @@
 
 /*
  * Brand Colors
- * 1) Brand color variables use English names to define colors to make palettes easier to
- *    identify. Names are generated using this tool: http://chir.ag/projects/name-that-color/
- * 2) Brand color variables should typically not be used directly in Sass partials. Instead, use
- *    second-tier application colors.
- *
  */
- $color-brand-green: #5C832F;
- $color-brand-green-dark: #3b4a20;
+ $color-brand-green: #5C832F;// Todo: going to remove
+ $color-brand-green-dark: #3b4a20;// Todo: going to remove
+ $deep-blue: #003b71;
+ $kp-blue: #0078b3;
+ $light-blue: #92ccf0;
 
+ /*
+ * Family Colors
+ */
+ $mid-orange: #f36c0d;
+ $deep-violet: #583985;
+ $light-orange: #fec941;
+ $mid-greeen: #57a635;
+ $deep-gray: #706259;
+ 
+/*
+ * Background Colors
+ */
+  $light-blue-30p: transparentize ($light-blue, 0.7);
+  $light-blue-20p: transparentize ($light-blue, 0.8);
+  $light-blue-10p: transparentize ($light-blue, 0.9);
+
+  $light-orange-20p: transparentize ($light-orange, 0.8);
+  $light-orange-10p: transparentize ($light-orange, 0.9);
+
+  $deep-gray-10p: transparentize ($deep-gray, 0.7);
+  $deep-gray-5p: transparentize ($deep-gray, 0.8);
 /*
  * Neutral Colors
  * 1) Neutral color variables use a numbered system to define variables for better maintainability.

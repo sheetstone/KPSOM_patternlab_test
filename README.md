@@ -17,8 +17,8 @@ Follow the instrucation below
 ```
 
 ## Run pattern lab
-In your terminal, run npm ```run patternlab <command>```, 
+In your terminal, run `npm run patternlab <command>`, 
 > where <command> is a documented method on the CLI, such as `build`, `serve`, or `help`.
-`npm patternlab build`
-`npm patternlab serve`
-`npm patternlab help`
+`npm run patternlab build`
+`npm run patternlab serve`
+`npm run patternlab help`
