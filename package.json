@@ -23,8 +23,10 @@
     "@pattern-lab/core": "^3.0.0-alpha.16",
     "@pattern-lab/engine-mustache": "^2.0.0-alpha.8",
     "@pattern-lab/uikit-workshop": "^1.0.0-alpha.7",
-    "gulp": "3.9.1",
     "minimist": "1.2.0",
     "starterkit-mustache-bootstrap": "github:pattern-lab/starterkit-mustache-bootstrap"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0"
   }
 }
