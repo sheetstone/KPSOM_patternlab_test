@@ -1,0 +1,315 @@
+/* Block */
+.block {
+	overflow: hidden;
+
+	a {
+		transition: color 0.2s ease;
+		&:hover, &:focus {
+			color: $deep-blue;
+		}
+	}
+}
+
+.headline {
+	line-height: 1.2;
+}
+
+// Hero Block
+.block-hero {
+	margin-bottom: $space;
+	text-align: center;
+
+	.b-excerpt {
+		font-family: $font-secondary;
+		margin: 0 auto 2em;
+		max-width: 39em;
+		color: $gray-dark;
+		font-style: italic;
+	}
+
+	.b-thumb {
+		margin-top: -1em;
+	}
+
+	img {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+// Tout Block
+.block-tout {
+	.b-eyebrow {
+		font-size: 100%;
+		text-transform: lowercase;
+	}
+
+	.b-title {
+		font-size: 100%;
+		text-transform: uppercase;
+		margin-bottom: 1em;
+	}
+
+}
+
+.event-shops-container {
+	display: block;
+
+	@media all and (min-width: 610px) {
+				display: flex;
+			}
+}
+
+.event-container {
+	width: 100%;
+
+	@media all and (min-width: 610px) {
+				width: 50%;
+			}
+}
+
+.shop-container {
+	width: 100%;
+
+	@media all and (min-width: 610px) {
+				width: 50%;
+			}
+}
+
+.jewelry-item {
+	display: block;
+	width: 100%;
+
+	&.active {
+		.jewelry-panel {
+			display: block;
+
+			@media all and (min-width: 640px) {
+				display: flex;
+			}
+		}
+
+		.jewelry-thumb:after {
+			display: block;
+		}
+	}
+}
+
+
+.jewelry-thumb {
+	display: block;
+	position: relative;
+
+	&:after {
+		display: none;
+		content: "";
+		position: absolute;
+		bottom: -1px;
+		left: 50%;
+		width: 0;
+		height: 0;
+		margin-left: -20px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid $gray-dark;
+		z-index: 99999;
+		}
+
+	img {
+	transition: all 0.2s ease-in-out;
+	box-shadow: 2px 11px 12px -13px rgba(0,0,0,0.2);
+	border: solid #ededed 1px;
+
+		&:hover {
+			transform: translate3d(0,0,0);
+			transform: scale(1.1);
+		}
+	}
+}
+
+
+
+.jewelry-panel {
+	display: none;
+	position: relative;
+	background: $gray-dark;
+	color: #fff;
+	padding: 1em;
+	width: 100vw;
+	z-index: 99999;
+
+	h2 {
+		font-family: "etica-display","HelveticaNeue","Helvetica","Arial",sans-serif;
+		padding: 0.3em 0 0.3em 0;
+	}
+
+	p {
+		font-family: "adelle","HelveticaNeue","Helvetica","Arial",sans-serif;
+		font-style: italic;
+	}
+
+	ul {
+		font-family: "adelle","HelveticaNeue","Helvetica","Arial",sans-serif;
+		font-style: italic;
+		list-style: disc;
+		margin-left: 10px;
+		padding: 0 0 1em 0;
+	}
+
+	@media all and (min-width: 1400px) {
+		padding: 1em 10vw;
+	}
+
+	@media all and (min-width: 1900px) {
+		padding: 1em 20vw;
+	}
+}
+
+.jewelry-panel-image {
+	img {
+		display: block;
+		width: 100%;
+		transform: none;
+		transition: none;
+	}
+
+	@media all and (min-width: 640px) {
+				flex: 1 0 auto;
+				width: 50%;
+			}
+}
+
+.jewelry-info {
+	padding: 1em 1.5em 1em 2em;
+	width: 100%;
+
+}
+
+.jewelry-gallery {
+	cursor: pointer;
+
+    ul {
+	    position: relative;
+	    top:0;
+		left:0;
+		list-style: none;
+		padding:0;
+	}
+
+	li {
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    z-index: 1;
+	    opacity: 0;
+	    transition: opacity 1s ease;
+
+	}
+
+	li.active {
+		 position: relative;
+		 width: 100%;
+		 z-index: 2;
+		 opacity: 1
+	}
+}
+
+//Press Block
+.block-press {
+	text-align: center;
+	margin-bottom: 1em;
+
+	img {
+		margin: 0 auto 0.5em;
+		filter: grayscale(100%);
+		max-width: 300px;
+		transition: all 0.2s ease-out;
+	}
+
+	&:hover, &:focus {
+		img {
+			filter: grayscale(0);
+		}
+	}
+}
+
+.block-testimonial {
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 0;
+	font-size: 24px;
+	opacity: 0;
+	transition: opacity 1s ease;
+	overflow: hidden;
+	z-index: 0;
+
+	&.active {
+		position: relative;
+		height: auto;
+		display: block;
+		opacity: 1;
+		z-index: 2;
+	}
+
+	blockquote {
+		border-left: none;
+		padding: 0;
+		margin: 1em;
+		color: $gray-dark;
+
+		p {
+			margin: 0;
+			padding: 0;
+
+			&:before {
+				content: '\201C';
+			}
+			&:after {
+				content: '\201D';
+			}
+		}
+
+		cite {
+			margin: 0;
+			padding: 0;
+		}
+	}
+
+	a {
+		font: $font;
+		color: $gray;
+		transition: color 0.2s ease;
+
+		&:hover {
+			color: $deep-blue;
+		}
+	}
+
+	p {
+		font: $font;
+		display: block;
+	}
+}
+
+.testimonial-section {
+	position: relative;
+	text-align: center;
+	min-height: 8em;
+	margin: 0;
+
+	@media all and (min-width: 700px) {
+		margin: 0 4em;
+	}
+
+	@media all and (min-width: 900px) {
+		margin: 0 9em;
+
+	}
+
+}
+
+.wp-caption {
+	max-width: 100% !important;
+}

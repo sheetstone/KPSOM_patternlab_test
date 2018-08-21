@@ -1,0 +1,33 @@
+{
+	"title" : "Home Page",
+	"bodyClass": "home",
+	"emergency" : false,
+	"headline" : {
+		"short" : "Frost Finery Jewelry Studio"
+	},
+	"excerpt" : {
+		"short" : "Pittsburgh is home to Frost Finery Jewlery Studio where creating staple pieces that can be worn every day is the mission. The addiction of melting, hammering and manipulating metal into beautiful gifts is the undertaking of boss lady and metal maven Melissa Frost. Put simply, Frost Finery was born to make and serve the shiny. "
+	},
+	"img": {
+		"landscape-16x9": {
+			"src": "../../images/sample/hero_about.jpg",
+			"alt": "Melissa Frost posing with Frost Finery jewerly on models"
+		}
+	},
+	"press" : {
+		"headline" : {
+			"short" : "Frost Finery in the Press"
+		},
+		"excerpt" : {
+			"short" : "Nod, nod, wink, wink..."
+		}
+	},
+	"thanks" : {
+		"headline" : {
+			"short" : "High Fives for this amazing community"
+		},
+		"excerpt" : {
+			"short" : "Pittsburgh is home to Frost Finery because Pittsburgh is full of open, giving, smart people and organizations. Shout outs and big hugs for those making Pittsburgh a place we’re proud to call home."
+		}
+	}
+}

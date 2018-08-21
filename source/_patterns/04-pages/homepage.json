@@ -1,0 +1,16 @@
+{
+	"title" : "Home Page",
+	"headline" : {
+		"short" : "Handmade from the bench to you"
+	},
+	"excerpt" : {
+		"short" : "Lustrous daily-wear jewelry handmade in Pittsburgh to adorn and delight. Owner Melissa Frost designs and fabricates every piece for durability and style."
+	},
+	"img": {
+		"landscape-16x9": {
+			"src": "http://frostfinery.com/wp-content/uploads/2014/10/hero_stack_hp4.jpg",
+			"alt": "Mountains"
+		}
+	},
+	"cta" : "Shop all"
+}
