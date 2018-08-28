@@ -4,7 +4,9 @@
  * The gulp wrapper around patternlab-node core, providing tasks to interact with the core library.
  ******************************************************/
 const gulp = require('gulp');
+const sass = require('gulp-sass');
 const argv = require('minimist')(process.argv.slice(2));
+const browserSync = require('browser-sync').create();
 
 /******************************************************
  * PATTERN LAB  NODE WRAPPER TASKS with core library
@@ -60,9 +62,27 @@ gulp.task('patternlab:serve', function() {
     // do something else when this promise resolves
   });
 });
+gulp.task('sass', function () {
+  return gulp.src('./source/css/style.scss')
+    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(gulp.dest('./source/css/'));
+});
 
 gulp.task('patternlab:installplugin', function() {
   patternlab.installplugin(argv.plugin);
 });
 
-gulp.task('default', ['patternlab:help']);
+gulp.task('browserSync', function() {
+  browserSync.init({
+    server: {
+      baseDir: 'public'
+    },
+  })
+})
+gulp.task('browserRelod',function(){
+  browserSync.reload();
+})
+
+gulp.task('default', ['patternlab:build','sass','browserSync'], function(){
+  gulp.watch('./source/css/**/*.scss', ['sass', 'browserRelod']);
+});
