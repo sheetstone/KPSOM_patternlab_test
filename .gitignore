@@ -6,6 +6,7 @@
 /out-tsc
 /public
 /pattern_exports
+dependencyGraph.json
 
 # dependencies
 /node_modules
