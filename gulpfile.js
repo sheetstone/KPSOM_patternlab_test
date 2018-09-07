@@ -14,7 +14,7 @@ const browserSync = require('browser-sync').create();
 const config = require('./patternlab-config.json');
 const patternlab = require('@pattern-lab/core')(config);
 
-function build() {
+const build = () => {
   return patternlab
     .build({
       watch: argv.watch,
@@ -25,7 +25,7 @@ function build() {
     });
 }
 
-function serve() {
+const serve = () => {
   return patternlab.server
     .serve({
       cleanPublic: config.cleanPublic,
@@ -35,54 +35,56 @@ function serve() {
     });
 }
 
-gulp.task('patternlab:version', function() {
+gulp.task('patternlab:version', function () {
   console.log(patternlab.version());
 });
 
-gulp.task('patternlab:patternsonly', function() {
+gulp.task('patternlab:patternsonly', function () {
   patternlab.patternsonly(config.cleanPublic);
 });
 
-gulp.task('patternlab:liststarterkits', function() {
+gulp.task('patternlab:liststarterkits', function () {
   patternlab.liststarterkits();
 });
 
-gulp.task('patternlab:loadstarterkit', function() {
+gulp.task('patternlab:loadstarterkit', function () {
   patternlab.loadstarterkit(argv.kit, argv.clean);
 });
 
-gulp.task('patternlab:build', function() {
+gulp.task('patternlab:build', function () {
   build().then(() => {
     // do something else when this promise resolves
   });
 });
 
-gulp.task('patternlab:serve', function() {
+gulp.task('patternlab:serve', function () {
   serve().then(() => {
     // do something else when this promise resolves
   });
 });
-gulp.task('sass', function () {
-  return gulp.src('./source/css/style.scss')
-    .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-    .pipe(gulp.dest('./source/css/'));
-});
 
-gulp.task('patternlab:installplugin', function() {
+gulp.task('patternlab:installplugin', function () {
   patternlab.installplugin(argv.plugin);
 });
 
-gulp.task('browserSync', function() {
+
+/* * Build sass project * */
+const buildSass = () => {
+  return gulp.src('./source/css/style.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(gulp.dest('./source/css/'));
+}
+
+/* * sync browser * */
+gulp.task('browserSync', function () {
   browserSync.init({
     server: {
       baseDir: 'public'
     },
   })
 })
-gulp.task('browserRelod',function(){
+gulp.task('browserRelod', function () {
   browserSync.reload();
 })
 
-gulp.task('default', ['patternlab:build','sass','browserSync'], function(){
-  gulp.watch('./source/css/**/*.scss', ['sass', 'browserRelod']);
-});
+gulp.task('default', gulp.parallel(serve, buildSass));

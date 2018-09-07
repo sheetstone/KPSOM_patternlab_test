@@ -7,6 +7,8 @@
 /public
 /pattern_exports
 dependencyGraph.json
+style.css
+dependencyGraph.json
 
 # dependencies
 /node_modules

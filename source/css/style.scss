@@ -32,15 +32,9 @@ Version: 1.0
  * TOC To Be Continued
  */
 
-
-
 @import "scss/generic/variables";
 @import "scss/generic/mixins";
 @import "scss/generic/reset";
-
-
-
-
 
 /*------------------------------------*\
     $GLOBAL ELEMENTS
@@ -56,15 +50,10 @@ Version: 1.0
 @import "scss/base/tables";
 @import "scss/base/animation";
 
-
-
-
-
 /*------------------------------------*\
     $LAYOUT
 \*------------------------------------*/
 @import "scss/objects/layout";
-
 
 /*------------------------------------*\
     $PAGE STRUCTURE
@@ -74,13 +63,10 @@ Version: 1.0
 @import "scss/objects/main";
 @import "scss/objects/footer";
 
-
-
 /*------------------------------------*\
     $TEXT Styles
 \*------------------------------------*/
 @import "scss/objects/text";
-
 
 /*------------------------------------*\
     $COMPONENTS
@@ -93,5 +79,3 @@ Version: 1.0
 @import "scss/objects/tabs";
 @import "scss/objects/sections";
 @import "scss/objects/article";
-
-
